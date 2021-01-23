@@ -9,8 +9,8 @@ const dark = {
     black: '#000',
     gray: '#bfbfbf',
     
-    success: '#3274d1',
-    info: '#ff4500',
+    success: '#8f10d9',
+    info: '#ff3366',
     warning: '#bd081c',
   },
   
