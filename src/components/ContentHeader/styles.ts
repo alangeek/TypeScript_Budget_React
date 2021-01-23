@@ -19,9 +19,9 @@ export const TitleContainer = styled.div<ITitleContainerProps>`
     color: ${props => props.theme.colors.white};
 
     &::after {
-      content: '';
+      content: url("../assets/svg.svg");
       display: block;
-      width: 55px;
+      width: 100%;
       border-bottom: 10px solid ${props => props.lineColor};
     }
   } 
