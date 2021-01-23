@@ -12,6 +12,7 @@ const dark = {
     success: '#8f10d9',
     info: '#ff3366',
     warning: '#bd081c',
+    
   },
   
 };
