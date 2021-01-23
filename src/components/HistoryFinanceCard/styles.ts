@@ -11,7 +11,7 @@ export const Container = styled.li`
   background-color: ${props => props.theme.colors.primary};
 
   list-style: none;
-  border-radius: 5px;
+  border-radius: 10px;
 
   margin: 10px 0;
   padding: 12px 10px;
@@ -38,13 +38,24 @@ export const Container = styled.li`
     padding-left: 10px;
   }
 
+  > div span {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
 
 
 `;
 
 export const Tag = styled.div<ITagProps>`
-  width: 10px;
+  width: 15px;
   height: 100%;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 
   background-color: ${props => props.color};
 
