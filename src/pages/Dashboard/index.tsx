@@ -3,10 +3,15 @@ import React, { useState, useMemo } from 'react';
 import ContentHeader from '../../components/ContentHeader';
 import SelectInput from '../../components/Selectinput';
 import WalletBox from '../../components/WalletBox';
+import MessageBox from '../../components/MessageBox';
 
 import expenses from '../../repositories/expenses';
 import gains from '../../repositories/gains';
 import listOfMonths from '../../utils/months';
+
+import happyImg from '../../assets/happy.svg';
+import sadImg from '../../assets/sad.svg';
+
 
 import { Container, Content } from './styles';
 
@@ -84,15 +89,15 @@ const Dashboard: React.FC = () => {
 
          <Content>
            <WalletBox
-              title="saldo"
-              color="#0061f2"
+              title="saldo😻"
+              color="#ff3b00"
               amount={159.00}
               footerLabel="atualizado com base nas entradas e saídas"
               icon="dolar"
             />
 
             <WalletBox
-              title="entradas"
+              title="entradas😸"
               color="#00f213"
               amount={5000.00}
               footerLabel="atualizado com base nas entradas e saídas"
@@ -100,11 +105,18 @@ const Dashboard: React.FC = () => {
             />
 
             <WalletBox
-              title="saídas"
+              title="saídas😿"
               color="#ff0047"
               amount={4850.00}
               footerLabel="atualizado com base nas entradas e saídas"
               icon="arrowDown"
+            />
+
+            <MessageBox 
+              title="Mutio bem!"
+              description="Sua carteira está possitiva!"
+              footerText="Continue assim. Considere investir o seu saldo."
+              icon={happyImg}
             />
          </Content>
        </Container>
