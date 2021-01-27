@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp } from 'react-icons/md';
 
-import logoImg from '../../assets/dollar2.svg';
+import logoImg from '../../assets/dolar2.svg';
 
 import { Container, Header, LogoImg, Title, MenuContainer, MenuItemLink } from './styles';
 
