@@ -1,32 +1,30 @@
 import React, { useState, useMemo } from 'react';
 
+
 import ContentHeader from '../../components/ContentHeader';
 import SelectInput from '../../components/Selectinput';
 import WalletBox from '../../components/WalletBox';
 import MessageBox from '../../components/MessageBox';
+import PieChart from '../../components/PieChart';
+
 
 import expenses from '../../repositories/expenses';
 import gains from '../../repositories/gains';
 import listOfMonths from '../../utils/months';
+
 
 import happyImg from '../../assets/happy.svg';
 import sadImg from '../../assets/sad.svg';
 import grinningImg from '../../assets/grinning.svg';
 
 
-
-
 import { Container, Content } from './styles';
+
 
 const Dashboard: React.FC = () => {
   const [monthSelected, setMonthSelected] = useState<number>(new Date().getMonth() + 1);
   const [yearSelected, setYearSelected] = useState<number>(new Date().getFullYear());
 
-  const options = [
-    {value: 'Alan', label: 'Alan'},
-    {value: 'Aline', label: 'Aline'},
-    {value: 'Sara', label: 'Sara'}
-  ];
 
   const years = useMemo(() => {
     let uniqueYears: number[] = [];
@@ -196,6 +194,8 @@ const Dashboard: React.FC = () => {
               footerText={message.footerText}
               icon={message.icon}
             />
+
+            <PieChart />
          </Content>
        </Container>
     );
