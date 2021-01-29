@@ -11,6 +11,9 @@ import listOfMonths from '../../utils/months';
 
 import happyImg from '../../assets/happy.svg';
 import sadImg from '../../assets/sad.svg';
+import grinningImg from '../../assets/grinning.svg';
+
+
 
 
 import { Container, Content } from './styles';
@@ -99,6 +102,36 @@ const Dashboard: React.FC = () => {
     return totalGains - totalExpenses
   },[totalGains, totalExpenses]);
 
+  const message = useMemo(() => {
+    if(totalBalance < 0) {
+      return {
+        title: "Que Doooó!",
+        description: "Neste mês, você gastou mais do que deveria.",
+        footerText: "Verifique seus gastos e tente cortar algumas coisas desnecessárias.",
+        icon: sadImg
+      }
+      
+    }
+
+    else if(totalBalance === 0) {
+      return {
+        title: "Ufaaaaa!",
+        description: "Neste mês, você gastou exatamente o que ganhou.",
+        footerText: "Tenha cuidado. No próximo tente poupar o seu dinheiro.",
+        icon: grinningImg
+      }
+      
+    } else {
+      return {
+        title: "Muitiiio bem!",
+        description: "Sua carteira está positiva.",
+        footerText: "Continue assim. Considere investir o seu saldo para realizar suas metas.",
+        icon: happyImg
+      }
+    }
+    
+  },[totalBalance]);
+
   const handleMonthSelected = (month: string) =>{
     try {
       const parseMonth = Number(month);
@@ -158,10 +191,10 @@ const Dashboard: React.FC = () => {
             />
 
             <MessageBox 
-              title="Mutio bem!"
-              description="Sua carteira está possitiva!"
-              footerText="Continue assim. Considere investir o seu saldo."
-              icon={happyImg}
+              title={message.title}
+              description={message.description}
+              footerText={message.footerText}
+              icon={message.icon}
             />
          </Content>
        </Container>
