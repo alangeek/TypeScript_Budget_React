@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   margin: 10px 0;
 
-  background-color: ${props => props.theme.colors.tertiary};
+  background-color: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
 
   border-radius: 7px;
@@ -61,7 +61,8 @@ export const Legend = styled.li<ILegendProps>`
     height: 40px;
     border-radius: 7px;
 
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: bold;
     line-height: 40px;
     text-align: center;
   }
