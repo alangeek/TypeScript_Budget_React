@@ -106,7 +106,7 @@ const Dashboard: React.FC = () => {
   const message = useMemo(() => {
     if(totalBalance < 0) {
       return {
-        title: "Que Doooó!",
+        title: "Grau de bem-estar Que Doooó!",
         description: "Neste mês, você gastou mais do que deveria.",
         footerText: "Verifique seus gastos e tente cortar algumas coisas desnecessárias.",
         icon: sadImg
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
     } 
     else if(totalGains === 0 && totalExpenses === 0) {
       return {
-        title: "Op´s!",
+        title: "Grau de bem-estar Op´s!",
         description: "Neste mês, não há registros de entradas ou saídas.",
         footerText: "Parece que você não fez nenhum registro no mês e ano selecionado.",
         icon: opsImg
@@ -123,7 +123,7 @@ const Dashboard: React.FC = () => {
     }
     else if(totalBalance === 0) {
       return {
-        title: "Ufaaaaa!",
+        title: "Grau de bem-estar Ufaaaaa!",
         description: "Neste mês, você gastou exatamente o que ganhou.",
         footerText: "Tenha cuidado. No próximo tente poupar o seu dinheiro.",
         icon: grinningImg
@@ -132,8 +132,8 @@ const Dashboard: React.FC = () => {
     }
      else {
       return {
-        title: "Muitiiio bem!",
-        description: "Sua carteira está positiva.",
+        title: "Grau de bem-estar Muitiiio bem!",
+        description: "Pontuação de saúde financeira indica que  sua carteira está positiva.",
         footerText: "Continue assim. Considere investir o seu saldo para realizar suas metas.",
         icon: happyImg
       }
