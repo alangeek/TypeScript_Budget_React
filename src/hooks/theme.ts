@@ -45,4 +45,10 @@ const ThemeProvider: React.FC = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   )
-};
+}
+
+function useTheme(): IThemeContext {
+  const context = useContext(ThemeContext);
+
+  return context;
+}
