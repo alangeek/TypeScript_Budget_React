@@ -31,14 +31,13 @@ const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState<ITheme>(dark);
-
   const toggleTheme = () => {
     if(theme.title === 'dark') {
       setTheme(light);
     } else {
       setTheme(dark);
     }
-  };
+};
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, theme }}>
@@ -52,3 +51,5 @@ function useTheme(): IThemeContext {
 
   return context;
 }
+
+export { ThemeProvider, useTheme };
