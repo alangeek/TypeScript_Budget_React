@@ -3,9 +3,12 @@ import { MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp } from 'react-
 
 import logoImg from '../../assets/dolar2.svg';
 
-import { Container, Header, LogoImg, Title, MenuContainer, MenuItemLink } from './styles';
+import { Container, Header, LogoImg, Title, MenuContainer, MenuItemLink, MenuItemButton, } from './styles';
+
+import { useAuth } from '../../hooks/auth';
 
 const Aside: React.FC = () => {
+  const { signOut } = useAuth();
   return (
     <Container>
       <Header>
@@ -29,10 +32,10 @@ const Aside: React.FC = () => {
           Despesas
         </MenuItemLink>
 
-        <MenuItemLink href="#">
+        <MenuItemButton onClick={signOut}>
           <MdExitToApp />
           Logout
-        </MenuItemLink>
+        </MenuItemButton>
       </MenuContainer>
     </Container>
   );
