@@ -1,17 +1,17 @@
 const light = {
   title: 'light',
   colors: {
-    primary: '#dcdcdc',
-    secondary: '#fff',
+    primary: '#fff',
+    secondary: '#f5f5f5',
     tertiary: '#f5f5f5',
     
-    white: '#fff',
+    white: '#333',
     black: '#000',
     gray: '#bfbfbf',
     
-    success: '#03bb85',
-    info: '#3b5998',
-    warning: '#ff6961',
+    success: '#8f10d9',
+    info: '#00a8ff',
+    warning: '#bd081c',
   },
   
 };
