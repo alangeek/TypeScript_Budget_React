@@ -21,7 +21,7 @@ const Aside: React.FC = () => {
           <MdDashboard />
           Dashboard
         </MenuItemLink>
-
+        <span></span>
         <MenuItemLink href="/list/entry-balance">
           <MdArrowUpward />
           Receitas
@@ -31,7 +31,7 @@ const Aside: React.FC = () => {
           <MdArrowDownward />
           Despesas
         </MenuItemLink>
-
+        <span></span>
         <MenuItemButton onClick={signOut}>
           <MdExitToApp />
           Logout

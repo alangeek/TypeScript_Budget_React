@@ -31,6 +31,11 @@ export const MenuContainer = styled.nav`
   flex-direction: column;
   
   margin-top: 50px;
+   
+  > span {
+    border: 1px solid #9e87871a;
+    width: 90%;
+  }  
 
   
 `;
