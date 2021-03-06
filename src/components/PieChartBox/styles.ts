@@ -94,11 +94,30 @@ export const Legend = styled.li<ILegendProps>`
 
   > span {
     margin-left: 5px;
-  }  
+  }
+
+  @media(max-width: 1345px)  {
+    font-size: 14px;
+    margin: 3px 0;
+
+    > div {
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+    }
+
+    > span {
+      margin-left: 7px;
+    }
+  } 
 `;
 
 export const SideRight = styled.main`
   display: flex;
   flex: 1;
   justify-content: center;
+
+  @media(max-width: 1345px) {
+    height: 100%;
+  }
 `;
