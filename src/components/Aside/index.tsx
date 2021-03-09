@@ -10,7 +10,7 @@ import { useAuth } from '../../hooks/auth';
 const Aside: React.FC = () => {
   const { signOut } = useAuth();
   return (
-    <Container>
+    <Container menuIsOpen={true}>
       <Header>
         <LogoImg src={logoImg} alt="Minha Carteira de gastos" />
         <Title>Minhas Finanças</Title>
