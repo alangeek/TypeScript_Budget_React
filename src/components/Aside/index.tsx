@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import Toggle from '../Toggle';
+
 import { 
   MdDashboard, 
   MdArrowDownward, 
@@ -19,17 +21,27 @@ import {
   MenuItemLink, 
   MenuItemButton,
   ToggleMenu,
+  ThemeToggleFooter,
  } from './styles';
 
 import { useAuth } from '../../hooks/auth';
+import { useTheme } from '../../hooks/theme';
 
 const Aside: React.FC = () => {
-  const [toggleMenuIsOpned, setToggleMenuIsOpned] = useState(false);
-  
   const { signOut } = useAuth();
+  const { toggleTheme, theme } = useTheme();
+  
+  const [toggleMenuIsOpned, setToggleMenuIsOpned] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(() => theme.title === 'dark' ? true : false);
+  
 
   const handleToggleMenu = () => {
     setToggleMenuIsOpned(!toggleMenuIsOpned);
+  }
+
+  const handleChangeTheme = () => {
+    setDarkTheme(!darkTheme);
+    toggleTheme();
   }
   
   return (
@@ -64,6 +76,15 @@ const Aside: React.FC = () => {
           Logout
         </MenuItemButton>
       </MenuContainer>
+
+      <ThemeToggleFooter menuIsOpen={toggleMenuIsOpned}>
+        <Toggle
+          labelLeft="🌞" 
+          labelRight="🌛"
+          checked={darkTheme}
+          onChange={handleChangeTheme} 
+        />
+      </ThemeToggleFooter>
     </Container>
   );
 }

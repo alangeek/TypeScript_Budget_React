@@ -4,6 +4,10 @@ interface IContainerProps {
   menuIsOpen: boolean;
 }
 
+interface IThemeToggleFooter {
+  menuIsOpen: boolean;
+}
+
 export const Container = styled.div<IContainerProps>`
   grid-area: AS;
 
@@ -139,4 +143,14 @@ export const ToggleMenu = styled.button`
     align-items: center;
   }
 
+`;
+
+export const ThemeToggleFooter = styled.footer<IThemeToggleFooter>`
+  display: none;
+  position: absolute;
+  bottom: 30px;
+
+  @media(max-width: 600px) {
+    display: ${props => props.menuIsOpen ? 'flex' : 'none'};
+  }
 `;
